@@ -2,11 +2,11 @@
 
 body{
     margin:0;
-    font-size: 1rem;
-    font-family: "DM Sans",sans-serif;
+    /* font-size: 1rem; */
+    font-family: 'DM Sans', sans-serif;
     color: #2f1c6a;
-    font-size: 100%;
-    letter-spacing: 0.6px;
+    /* font-size: 100%; */
+    /* letter-spacing: 0.6px; */
 }
 nav{
     width: 100%;
@@ -49,10 +49,14 @@ nav{
     font-weight: 700;
     justify-content: space-between;
     margin-left: 24px;
+    cursor: pointer;
 }
 .language img {
     width: 32px;
     height: 20px;
+}
+.lt-lang {
+    padding-left: 4px;
 }
 .nav-wrapper{
     display:flex;
@@ -131,25 +135,38 @@ h1{
     text-align: center;
     
 }
-.banner-wrapper p{
-    text-align: center;
+.banner-wrapper span{
+    display: flex;
+    align-items: center;
     font-size: 16px;
     line-height: 24px;
-    font-weight: 100;
     margin: 0;
     padding: 0;
     text-decoration: none;
     margin-bottom: 16px;
+    color: #2f1c6a;
     
+    
+}
+.banner-wrapper p{
+    margin:0;
+    text-align: center;
+}
+.flex-banner {
+    display: flex;
+    flex-direction: column;
 }
 /* upper banner section start */
 .upper-banner{
-    margin:32px;
+    margin-right:16px;
+    margin-left: 16px;
+    margin-bottom: 32px;
+    padding-bottom: 0;
 }
 .price-wrapper{
     display: flex;
     justify-content: center;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
 }
 .price-container{
     display: flex;
@@ -184,6 +201,8 @@ h1{
     font-size: 18px;
     font-weight: 700;
     text-align: center;
+    margin-top: 0;
+    box-sizing: border-box;
 }
 .counter-wrapper{
     display: flex;
@@ -240,20 +259,37 @@ h1{
     margin-bottom: 12px;
 }
 .guarantee-wrapper {
-    margin: auto;
-    text-align: center;
-    font-weight: 100;
+    display: flex;
+    justify-content: center;
+    gap:3px;
+    color: #6a44db;
+    height: 24px;
     
 }
 /* upper banner end */
 .lower-banner img{
+    overflow: hidden;
     width: 100%;
 }
+.guarantee-span{
+    margin-bottom: 0;
+}
+
+/* from 992 px */
 @media (min-width: 992px){
     .burger-button{
         display: none;
     }
-    
+    .banner-wrapper{
+        padding-left: 40px;
+        padding-right: 40px;
+        width: 100%;
+        max-width: 100%;
+        padding-top:76px;
+        padding-bottom: 96px;
+        justify-content: space-between;
+        box-sizing: border-box;
+    }
     .menu-wrapper{
         height: 48px;
         padding: 20px 40px 20px 40px;
@@ -267,12 +303,40 @@ h1{
         left: 0px;
         cursor: pointer;
 }
+    .flex-banner {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content:space-evenly;
 }
+    .upper-banner{
+        width: 40%;
+        align-items: start;
+        display: flex;
+        flex-direction: column;
+    }
+    .lower-banner{
+        max-width: 616px;
+        width: 54.61%;
+    }
+    .upper-banner h1{
+        font-size: 36px;
+        text-align: start;
+        line-height: 40px;
+    }
+    .choose-button{
+        margin-left:0
+    }
+    .banner-wrapper p{
+        text-align: start;
+    }
+ }
+
   
     
         
 
-/* from 992px */
+/* up to 992px */
 @media (max-width: 992px){
     .nav-wrapper, .language{
         display: none;
