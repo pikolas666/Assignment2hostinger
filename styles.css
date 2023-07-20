@@ -1,3 +1,68 @@
+/* mini-reset */
+*, *::before, *::after {box-sizing:border-box}
+html, body {padding:0; margin:0}
+body {min-height:100%}
+
+/* HEADER with drop-shadow on scroll */
+header {
+  height: 72px;  /* 64 + 16px */
+  position: sticky;
+  -webkit-position: sticky;
+  /* negative top allows for 16 pixels of movement before sticking */
+  top: -16px; 
+  /* make sure header overlaps main*/
+  z-index: 1;
+  color: white;
+  text-align: center;
+  /* fix weird flickering issue in chrome: https://stackoverflow.com/a/22224884/286685 */
+  -webkit-backface-visibility: hidden;
+}
+
+/* PSEUDO ELEMENTS to create drop-shadow */
+header::before,
+header::after {
+  content: '';
+  display: block;
+  height: 16px;
+  /* make pseudo elements sticky as well */
+  position: sticky;
+  -webkit-position: sticky;
+}
+
+/* SHADOW */
+header::before {
+  top: 36px; /* shadow is at bottom of element, so at 48 + 16 = 64px */
+  box-shadow: 0px 1px 8px rgba(0,0,0, 0.5);
+}
+
+/* COVER */
+header::after {
+  /* linear gradient from background color to transparent acts as
+     a transition effect so the shadow appears gradually */
+  background: linear-gradient(white 10%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0.4) 70%, transparent);
+  top: 0;
+  /* cover should fall over shadow */
+  z-index: 2;
+}
+
+/* HEADER CONTENT */
+header >nav {
+  background: rgb(255, 255, 255);
+  height: 56px;
+  /* padding: 20px; */
+  position: sticky;
+  -webkit-position: sticky;
+  top: 0px;
+  /* compensate for shadow with negative margin */
+  margin-top: -16px;
+  /* content should fall over shadow and cover */
+  z-index: 99;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+  color: #1d1e20;
+  align-items: center;
+}
 
 
 body{
@@ -8,16 +73,11 @@ body{
     /* font-size: 100%; */
     /* letter-spacing: 0.6px; */
 }
-nav{
-    width: 100%;
-    position:fixed;
-    top: 0;
-    z-index: 99;
-    color: #1d1e20;
-}
+
+
 
 .menu-wrapper{
-    height: 2.25rem;
+    height: 100%;
     padding: 10px 16px;
     display: flex;
     justify-content: space-between;
@@ -272,11 +332,20 @@ h1{
     width: 100%;
 }
 .guarantee-span{
-    margin-bottom: 0;
+    margin-bottom: 0!important;
 }
 
 /* from 992 px */
 @media (min-width: 992px){
+    header {
+        height: 106px;
+    }
+    header::before {
+        top: 70px; 
+    }
+    header >nav {
+        height: 90px;
+    }
     .burger-button{
         display: none;
     }
@@ -291,7 +360,7 @@ h1{
         box-sizing: border-box;
     }
     .menu-wrapper{
-        height: 48px;
+        height: 88px;
         padding: 20px 40px 20px 40px;
     }
     .logo-wrapper{
