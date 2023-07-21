@@ -1,7 +1,12 @@
 /* mini-reset */
 *, *::before, *::after {box-sizing:border-box}
 html, body {padding:0; margin:0}
-body {min-height:100%}
+body {
+    min-height:100%;
+    margin:0;
+    color: #2f1c6a;
+    font-family: 'DM Sans', sans-serif;
+}
 
 /* HEADER with drop-shadow on scroll */
 header {
@@ -170,7 +175,7 @@ body{
 }
 main{
     width: 100%;
-    height: 900px;
+    height: 1600px;
     
 }
 .banner-wrapper{
@@ -336,9 +341,9 @@ h1{
 .guarantee-span{
     margin-bottom: 0!important;
 }
-
+/* trust section start */
 .trust-offer{
-    padding-top: 32px;
+    padding-top: 42px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -353,16 +358,23 @@ h1{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap:50px;
+    color: #2f1c6a;
+}
+.trust p {
+    font-weight: 500;
+    color: #2f1c6a;
+    font-size: 16px;
 }
 .trust-title{
     font-size: 27px;
     height:40px;
     display: flex;
-    align-items: baseline;
+    align-items: center;
 }
-.trust-title img{
-    width: 120px;
-    height: 30px;
+.trust-image{
+  
+    height: 70%;
     align-self: flex-end;
 }
 .trust-stars {
@@ -375,8 +387,8 @@ h1{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     border: none;
     border-radius: 1px;
     background-color: #00b67a;
@@ -386,10 +398,32 @@ h1{
     background: linear-gradient(to right,#00b67a 0%,#00b67a 50%,#dcdce6 50%,#dcdce6 100%);
 }
 .score {
-    margin-top: 6px;
+    font-size: 14px;
+    margin-top: 10px;
 }
 .score .bold{
     font-weight: 800;
+
+}
+.google{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    position: relative;
+    left: 20px;
+}
+.google-image{
+    height:80%;
+}
+.google-stars {
+    display: flex;
+    font-size: 23px;
+    letter-spacing: 5px;
+}
+.plan-wrapper{
+    text-align: center;
+    margin-top: 32px;
+    margin-bottom: 32px;
 }
 /* from 992 px */
 @media (min-width: 992px){
@@ -458,6 +492,23 @@ h1{
     }
     .banner-wrapper p{
         text-align: start;
+    }
+    .plan-wrapper h2{
+
+        font-size: 36px;
+    }
+    .trust-offer{
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 100%;
+    max-width: 100%;
+    }
+    .trust {
+        display: flex;
+        flex-direction: row;
+        justify-content:space-evenly;
+        gap:50px;
+        width: 100%;
     }
  }
 
