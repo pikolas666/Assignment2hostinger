@@ -433,24 +433,29 @@ column-gap: 16px;
 display: grid;
 margin-left: auto;
 margin-right: auto;
-max-width: 540px;
+/* deleted max-width: 540px; */
 padding-left: 16px;
 padding-right: 16px;
 width: 100%;
+
 }
 .inner-table{
     border: 1px solid #d5dfff;
     border-radius: 4px;
+    
 }
 .another-table{
     padding: 32px 24px 0;
+    border-bottom: 1px solid #d5dfff;
 }
 /* switching media with table-card */
 .table-card{
-    margin-bottom: 32px;
+    /* margin-bottom: 32px; */
     display: grid;
     grid-template-columns: 1fr;
+    grid-column-gap: 32px;
 }
+/* card1 */
 .card1 {
     align-items: center;
     display: flex;
@@ -458,9 +463,11 @@ width: 100%;
     justify-content: center;
 
     /* mobile */
-    border-bottom: 1px solid #d5dfff;
+    
     padding-bottom: 32px;
     grid-column: span 1;
+    /* border-right: 1px solid #d5dfff;
+    border-left: 1px solid #d5dfff; */
 }
 .card1 h3{
     text-align: center;
@@ -533,6 +540,7 @@ width: 100%;
     font-size: 14px;
     margin-top: 16px;
 }
+/* card2 */
 .card2{
     display: flex;
     margin-top: 32px;
@@ -540,6 +548,35 @@ width: 100%;
     justify-content: center;
     grid-column: span 1;
 
+}
+.row-wrapper{
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+.card2-row{
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+    gap:5px;
+}
+/* card3 */
+.card3 {
+    border-top: 1px solid #d5dfff;
+    display: flex;
+    justify-content: center;
+    padding: 12px 0;
+}
+.card3-content{
+    align-items: center;
+    color: #673de6;
+    cursor: pointer;
+    display: flex;
+    font-weight: 700;
+    gap:4px;
+}
+.card3-content button{
+    all: unset;
 }
 /* from 992 px */
 @media (min-width: 992px){
@@ -626,6 +663,7 @@ width: 100%;
         gap:50px;
         width: 100%;
     }
+   
  }
 
   
@@ -637,5 +675,44 @@ width: 100%;
     .nav-wrapper, .language{
         display: none;
     }
+    .card-hidden{
+        display:none;
+    }
         
+}
+
+@media (min-width: 992px){
+    .table-card {
+        grid-template-columns: repeat(2,1fr);
+        
+    }
+    .card1{
+        
+        border-right: 1px solid #d5dfff;
+        
+
+    }
+}
+
+@media (min-width: 1200px){
+    .table-card {
+    grid-template-columns: repeat(3,1fr);
+    }    
+    .card1{
+        order: 2;
+        border-right: 1px solid #d5dfff;
+        border-left: 1px solid #d5dfff;
+
+    }
+    .card2{
+        order: 1;
+        
+    }
+    .card-hidden{
+        order: 3;
+        
+    }
+    .card3{
+        display: none;
+    }
 }
