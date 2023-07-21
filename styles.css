@@ -425,6 +425,122 @@ h1{
     margin-top: 32px;
     margin-bottom: 32px;
 }
+/* grid table */
+.tables{
+grid-column-gap: 16px;
+-moz-column-gap: 16px;
+column-gap: 16px;
+display: grid;
+margin-left: auto;
+margin-right: auto;
+max-width: 540px;
+padding-left: 16px;
+padding-right: 16px;
+width: 100%;
+}
+.inner-table{
+    border: 1px solid #d5dfff;
+    border-radius: 4px;
+}
+.another-table{
+    padding: 32px 24px 0;
+}
+/* switching media with table-card */
+.table-card{
+    margin-bottom: 32px;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.card1 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    /* mobile */
+    border-bottom: 1px solid #d5dfff;
+    padding-bottom: 32px;
+    grid-column: span 1;
+}
+.card1 h3{
+    text-align: center;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+}
+.discount {
+    margin-top: 24px;
+    
+}
+.save{
+    color: #5025d1;
+    background-color: #ebe4ff;
+    border-radius: 20px;
+    display: inline-block;
+    padding: 4px 12px;
+    margin-left: 4px;
+    font-size: 14px;
+    font-weight: 700;
+}
+.card-price-wrapper{
+    font-size: 48px;
+    margin-top: 4px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.card-price-wrapper p{
+    font-size: 14px;
+    margin:0;
+    opacity: .8;
+    text-align: center;
+}
+.add-button{
+    margin-top: 24px;
+    box-shadow: 0 1px 8px rgba(0,0,0,.16);
+    max-width: 248px;
+    width: 100%;
+    align-items: center;
+    background-color: #673de6;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    line-height: 1;
+    min-height: 48px;
+    padding: 12px 16px;
+    position: relative;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.free-months {
+    color: #673de6;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 0;
+
+}
+.price-terms {
+    text-align: center;
+    color: #727586;
+    font-size: 14px;
+    margin-top: 16px;
+}
+.card2{
+    display: flex;
+    margin-top: 32px;
+    flex-direction: column;
+    justify-content: center;
+    grid-column: span 1;
+
+}
 /* from 992 px */
 @media (min-width: 992px){
     header {
