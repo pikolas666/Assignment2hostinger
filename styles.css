@@ -183,6 +183,7 @@ main{
     max-width: 540px;
     padding-left: 16px;
     padding-right: 16px;
+    padding-bottom: 36px;
     width: 100%;
     margin-top: 0;
 }
@@ -324,6 +325,7 @@ h1{
     gap:3px;
     color: #6a44db;
     height: 24px;
+    align-items: baseline;
     
 }
 /* upper banner end */
@@ -335,6 +337,60 @@ h1{
     margin-bottom: 0!important;
 }
 
+.trust-offer{
+    padding-top: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 540px;
+    padding-left: 16px;
+    padding-right: 16px;
+    width: 100%;
+}
+.trust {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.trust-title{
+    font-size: 27px;
+    height:40px;
+    display: flex;
+    align-items: baseline;
+}
+.trust-title img{
+    width: 120px;
+    height: 30px;
+    align-self: flex-end;
+}
+.trust-stars {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+.cube{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 1px;
+    background-color: #00b67a;
+    font-size: 26px;
+}
+.green-grey {
+    background: linear-gradient(to right,#00b67a 0%,#00b67a 50%,#dcdce6 50%,#dcdce6 100%);
+}
+.score {
+    margin-top: 6px;
+}
+.score .bold{
+    font-weight: 800;
+}
 /* from 992 px */
 @media (min-width: 992px){
     header {
