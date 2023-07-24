@@ -701,8 +701,15 @@ footer{
    
 }
 footer h2{
+   
     font-size: 28px;
     line-height: 40px;
+    width: 90%;
+    margin: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+   
+    
 }
 .footer-wrapper .row-wrapper{
     justify-content: center;
