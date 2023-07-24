@@ -707,7 +707,9 @@ footer h2{
 .footer-wrapper .row-wrapper{
     justify-content: center;
 }
-
+.footer-image {
+    width: 100%;
+}
 /* media queries start here */
 /* from 992 px */
 @media (min-width: 992px){
