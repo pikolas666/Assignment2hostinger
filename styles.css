@@ -698,6 +698,10 @@ footer{
 }
 .footer-wrapper{
     text-align: center;
+    width: 90%;
+    margin: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
    
 }
 footer h2{
